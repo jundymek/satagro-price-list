@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import styles from "./plans.module.scss";
 import Card from "../card/Card";
+import CardStarter from "../card/CardStarter";
+import CardPremium from "../card/CardPremium";
+import CardProfessional from "../card/CardProfessional";
 
 const Plans = () => {
   async function getPlans() {
@@ -14,7 +17,12 @@ const Plans = () => {
   }, []);
   return (
     <div className={styles.wrapper}>
-      <Card />
+      <CardStarter />
+      <CardPremium />
+      <CardProfessional />
+      {/* <Card type="starter" />
+      <Card type="premium" />
+      <Card type="starter" /> */}
     </div>
   );
 };
