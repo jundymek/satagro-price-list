@@ -9,14 +9,16 @@ interface CardProps {
 
 const Card = ({ type, children }: CardProps) => {
   const titleWrapperClass = clsx(styles.titleWrapper, {
-    red: type === "premium",
-    blue: type === "professional",
+    [styles.red]: type === "premium",
+    [styles.blue]: type === "professional",
   });
 
   const buttonClass = clsx(styles.button, {
-    red: type === "premium",
-    blue: type === "professional",
+    [styles.red]: type === "premium",
+    [styles.blue]: type === "professional",
   });
+
+  console.log(titleWrapperClass);
 
   return (
     <section className={styles.container}>

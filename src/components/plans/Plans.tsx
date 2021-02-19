@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import styles from "./plans.module.scss";
-import Card from "../card/Card";
 import CardStarter from "../card/CardStarter";
 import CardPremium from "../card/CardPremium";
 import CardProfessional from "../card/CardProfessional";

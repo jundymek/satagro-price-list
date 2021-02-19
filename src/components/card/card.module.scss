@@ -1,6 +1,9 @@
+@import "../../styles/variables";
+
 .container {
   max-width: 300px;
   width: 100%;
+  margin: 10px 0px;
   min-height: 440px;
   display: flex;
   flex-direction: column;
@@ -11,6 +14,10 @@
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.01);
+  }
+
+  @media only screen and (min-width: $medium) {
+    margin: 0 10px;
   }
 }
 

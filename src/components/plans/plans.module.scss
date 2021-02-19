@@ -1,7 +1,13 @@
+@import "../../styles/variables";
+
 .wrapper {
   background-color: rgb(235, 231, 231);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
+  @media only screen and (min-width: $medium) {
+    flex-direction: row;
+  }
 }
