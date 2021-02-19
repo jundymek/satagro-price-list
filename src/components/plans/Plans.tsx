@@ -19,9 +19,6 @@ const Plans = () => {
       <CardStarter />
       <CardPremium />
       <CardProfessional />
-      {/* <Card type="starter" />
-      <Card type="premium" />
-      <Card type="starter" /> */}
     </div>
   );
 };
