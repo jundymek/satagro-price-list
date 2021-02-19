@@ -1,22 +1,22 @@
 import React from "react";
-import "./Card.scss";
+import styles from  "./card.module.scss";
 
 const Card = () => {
   return (
-    <section className="card">
-      <div className="card__title-wrapper">
-        <h2 className="card__title">PREMIUM</h2>
-        <p className="card__price">
+    <section className={styles.container}>
+      <div className={styles.titleWrapper}>
+        <h2 className={styles.title}>PREMIUM</h2>
+        <p className={styles.price}>
           15 <span>PLN</span>
         </p>
       </div>
-      <div className="card__text-wrapper">
-        <p className="card__text">All services included in Professional</p>
-        <p className="card__text">
+      <div className={styles.textWrapper}>
+        <p className={styles.text}>All services included in Professional</p>
+        <p className={styles.text}>
           High resolution monitoring with "Planet" Sensor integration (IoT, weather stations, etc)
         </p>
-        <p className="card__text card__text--last">Agronomy advice</p>
-        <button className="card__button">Buy this plan</button>
+        <p className={`${styles.text} ${styles.text__last}`}>Agronomy advice</p>
+        <button className={styles.button}>Buy this plan</button>
       </div>
     </section>
   );

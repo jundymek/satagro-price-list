@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Plans.scss";
+import styles from "./plans.module.scss";
 import Card from "../card/Card";
 
 const Plans = () => {
@@ -13,7 +13,7 @@ const Plans = () => {
     getPlans();
   }, []);
   return (
-    <div className="wrapper">
+    <div className={styles.wrapper}>
       <Card />
     </div>
   );
