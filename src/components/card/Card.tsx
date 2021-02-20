@@ -7,10 +7,11 @@ export interface CardProps {
   type: "starter" | "premium" | "professional";
   price: number;
   currency: string;
+  buttonText: string;
   children?: React.ReactNode;
 }
 
-const Card = ({ type, price, currency, children }: CardProps) => {
+const Card = ({ type, price, currency, buttonText, children }: CardProps) => {
   const titleWrapperClass = clsx(styles.titleWrapper, {
     [styles.red]: type === "premium",
     [styles.blue]: type === "professional",
@@ -29,7 +30,7 @@ const Card = ({ type, price, currency, children }: CardProps) => {
       </div>
       <div className={styles.textWrapper}>
         {children}
-        <button className={buttonClass}>Buy this plan</button>
+        <button className={buttonClass}>{buttonText}</button>
       </div>
     </section>
   );

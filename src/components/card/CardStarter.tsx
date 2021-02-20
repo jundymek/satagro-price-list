@@ -1,17 +1,20 @@
 import React from "react";
 import { translation } from "../../helpers/translations";
 import Card from "./Card";
-import styles from "./card.module.scss";
+import CardDescription from "./CardDescription";
 
 interface CardStarterProps {
   currency: string;
   price: number;
+  location: "PL" | "CZ" | "LT" | "SK";
 }
 
-const CardStarter = ({ currency, price }: CardStarterProps) => {
+const CardStarter = ({ currency, price, location }: CardStarterProps) => {
+  const description = translation[location].starter.description;
+  const buttonText = translation[location].starter.button;
   return (
-    <Card type="starter" currency={currency} price={price}>
-      <p className={`${styles.text} ${styles.text__last}`}>1 field up to 50 ha</p>
+    <Card type="starter" currency={currency} price={price} buttonText={buttonText}>
+      <CardDescription description={description} />
     </Card>
   );
 };

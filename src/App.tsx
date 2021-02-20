@@ -7,7 +7,7 @@ function App() {
       <div className={styles.top}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className={styles.curved}>
           <path
-            fill-opacity="1"
+            fillOpacity="1"
             d="M0,224L288,64L576,160L864,288L1152,224L1440,160L1440,320L1152,320L864,320L576,320L288,320L0,320Z"
           ></path>
         </svg>

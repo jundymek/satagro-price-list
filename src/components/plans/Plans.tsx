@@ -30,6 +30,7 @@ const Plans = () => {
   useEffect(() => {
     async function getPlans() {
       const data = await fetch(`https://app.satagro.pl/api/plans/?region=${location}&units=metric`);
+      console.log(data);
       const res = await data.json();
       setStarter(filterPlans(res).starter);
       setPremium(filterPlans(res).premium);
@@ -40,9 +41,11 @@ const Plans = () => {
 
   return (
     <div className={styles.wrapper}>
-      {starter && <CardStarter currency={starter.currency} price={starter.price} />}
-      {premium && <CardPremium price={premium.price} currency={premium.currency} />}
-      {professional && <CardProfessional price={professional.price} currency={professional.currency} />}
+      {starter && <CardStarter currency={starter.currency} price={starter.price} location={location} />}
+      {premium && <CardPremium price={premium.price} currency={premium.currency} location={location} />}
+      {professional && (
+        <CardProfessional price={professional.price} currency={professional.currency} location={location} />
+      )}
     </div>
   );
 };

@@ -1,20 +1,20 @@
 import React from "react";
+import { translation } from "../../helpers/translations";
 import Card from "./Card";
-import styles from "./card.module.scss";
+import CardDescription from "./CardDescription";
 
 interface CardPremiumProps {
   price: number;
   currency: string;
+  location: "PL" | "CZ" | "LT" | "SK";
 }
 
-const CardPremium = ({ price, currency }: CardPremiumProps) => {
+const CardPremium = ({ price, currency, location }: CardPremiumProps) => {
+  const description = translation[location].premium.description;
+  const buttonText = translation[location].premium.button;
   return (
-    <Card type="premium" price={price} currency={currency}>
-      <p className={styles.text}>All services included in Professional</p>
-      <p className={styles.text}>
-        High resolution monitoring with "Planet" Sensor integration (IoT, weather stations, etc)
-      </p>
-      <p className={`${styles.text} ${styles.text__last}`}>Agronomy advice</p>
+    <Card type="premium" price={price} currency={currency} buttonText={buttonText}>
+      <CardDescription description={description} />
     </Card>
   );
 };
