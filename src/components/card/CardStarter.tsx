@@ -1,4 +1,5 @@
 import React from "react";
+import { translation } from "../../helpers/translations";
 import Card from "./Card";
 import styles from "./card.module.scss";
 
