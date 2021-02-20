@@ -7,19 +7,19 @@ interface CardDescriptionProps {
 
 const CardDescription = ({ description }: CardDescriptionProps) => {
   return (
-    <>
+    <ul className={styles.textList}>
       {description.map((paragraph, index) =>
         index === description.length - 1 ? (
-          <p key={index} className={`${styles.text} ${styles.text__last}`}>
+          <li key={index} className={`${styles.text} ${styles.text__last}`}>
             {paragraph}
-          </p>
+          </li>
         ) : (
-          <p key={index} className={styles.text}>
+          <li key={index} className={styles.text}>
             {paragraph}
-          </p>
+          </li>
         )
       )}
-    </>
+    </ul>
   );
 };
 
