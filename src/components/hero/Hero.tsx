@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./hero.module.scss";
+import HeroPicture from "./HeroPicture";
 
 const Hero = () => {
   return (
     <div className={styles.wrapper}>
+      <HeroPicture />
       <h1 className={styles.title}>Cennik</h1>
       <p className={styles.heroText}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, velit veniam sed nesciunt voluptate commodi nam?
