@@ -1,7 +1,7 @@
 export const translation = {
   PL: {
     starter: {
-      price: "gratis",
+      price: "Gratis",
       description: ["1 pole do 50 ha"],
       button: "Załóż konto",
     },
@@ -23,10 +23,11 @@ export const translation = {
       ],
       button: "Kup teraz",
     },
+    year: "rok",
   },
   CZ: {
     starter: {
-      price: "zdarma",
+      price: "Zdarma",
       description: ["1 pole do 50 ha"],
       button: "VYTVOŘIT ÚČET",
     },
@@ -48,10 +49,11 @@ export const translation = {
       ],
       button: "KUP TEĎ",
     },
+    year: "rok",
   },
   LT: {
     starter: {
-      price: "nemokamai ",
+      price: "Nemokamai ",
       description: ["1 laukas iki 50 ha"],
       button: "Sukurti paskyrą",
     },
@@ -73,10 +75,11 @@ export const translation = {
       ],
       button: "pirkti dabar",
     },
+    year: "metus",
   },
   SK: {
     starter: {
-      price: "zadarmo ",
+      price: "Zadarmo ",
       description: ["1 pole do 50 ha"],
       button: "Vytvoriť účet",
     },
@@ -93,5 +96,6 @@ export const translation = {
       ],
       button: "Kúpte teraz",
     },
+    year: "rok",
   },
 };

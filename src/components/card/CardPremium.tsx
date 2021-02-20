@@ -13,7 +13,7 @@ const CardPremium = ({ price, currency, location }: CardPremiumProps) => {
   const description = translation[location].premium.description;
   const buttonText = translation[location].premium.button;
   return (
-    <Card type="premium" price={price} currency={currency} buttonText={buttonText}>
+    <Card type="premium" price={price} currency={currency} buttonText={buttonText} location={location}>
       <CardDescription description={description} />
     </Card>
   );

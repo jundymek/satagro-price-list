@@ -13,7 +13,7 @@ const CardStarter = ({ currency, price, location }: CardStarterProps) => {
   const description = translation[location].starter.description;
   const buttonText = translation[location].starter.button;
   return (
-    <Card type="starter" currency={currency} price={price} buttonText={buttonText}>
+    <Card type="starter" currency={currency} price={price} buttonText={buttonText} location={location}>
       <CardDescription description={description} />
     </Card>
   );

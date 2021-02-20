@@ -5,13 +5,14 @@ import CardPrice from "./CardPrice";
 
 export interface CardProps {
   type: "starter" | "premium" | "professional";
+  location: "PL" | "CZ" | "LT" | "SK";
   price: number;
   currency: string;
   buttonText: string;
   children?: React.ReactNode;
 }
 
-const Card = ({ type, price, currency, buttonText, children }: CardProps) => {
+const Card = ({ type, price, currency, buttonText, location, children }: CardProps) => {
   const titleWrapperClass = clsx(styles.titleWrapper, {
     [styles.red]: type === "premium",
     [styles.blue]: type === "professional",
@@ -30,7 +31,7 @@ const Card = ({ type, price, currency, buttonText, children }: CardProps) => {
     <section className={containerClass}>
       <div className={titleWrapperClass}>
         <h2 className={styles.title}>{type.toUpperCase()}</h2>
-        <CardPrice type={type} price={price} currency={currency} />
+        <CardPrice type={type} price={price} currency={currency} location={location} />
       </div>
       <div className={styles.textWrapper}>
         {children}
