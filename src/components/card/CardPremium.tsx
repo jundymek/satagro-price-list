@@ -1,9 +1,13 @@
 import React from "react";
 import Card from "./Card";
 import styles from "./card.module.scss";
-import { CardProps } from "./Card";
 
-const CardPremium = ({ price, currency }: Partial<CardProps>) => {
+interface CardPremiumProps {
+  price: number;
+  currency: string;
+}
+
+const CardPremium = ({ price, currency }: CardPremiumProps) => {
   return (
     <Card type="premium" price={price} currency={currency}>
       <p className={styles.text}>All services included in Professional</p>

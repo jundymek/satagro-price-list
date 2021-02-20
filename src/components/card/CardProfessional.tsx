@@ -1,9 +1,13 @@
 import React from "react";
 import Card from "./Card";
 import styles from "./card.module.scss";
-import { CardProps } from "./Card";
 
-const CardProfessional = ({ price, currency }: Partial<CardProps>) => {
+interface CardProfessionalProps {
+  price: number;
+  currency: string;
+}
+
+const CardProfessional = ({ price, currency }: CardProfessionalProps) => {
   return (
     <Card type="professional" price={price} currency={currency}>
       <p className={styles.text}>Satellite monitoring of your farm</p>
