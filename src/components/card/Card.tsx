@@ -19,8 +19,8 @@ const Card = ({ type, price, currency, buttonText, location, children }: CardPro
   });
 
   const buttonClass = clsx(styles.button, {
-    [styles.red]: type === "premium",
-    [styles.blue]: type === "professional",
+    [styles.btnRed]: type === "premium",
+    [styles.btnBlue]: type === "professional",
   });
 
   const containerClass = clsx(styles.container, {

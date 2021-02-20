@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap");
 
 .wrapper {
-  width: 100%;
+  width: 90%;
   height: 100%;
   text-align: center;
   display: flex;
@@ -17,13 +17,15 @@
 
 .title {
   z-index: 500;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 800;
   color: white;
   margin: 0;
   padding: 0;
   mix-blend-mode: difference;
-  // font-family: "Quicksand", sans-serif;
+  @media only screen and (min-width: $medium) {
+    font-size: 100px;
+  }
 }
 
 .heroText {
