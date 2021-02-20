@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./plans.module.scss";
 import CardStarter from "../card/CardStarter";
 import CardPremium from "../card/CardPremium";
 import CardProfessional from "../card/CardProfessional";
-import { useGetUserLocation } from "../../helpers/getUserLocation";
-
-type PlanType = "starter" | "premium" | "professional";
+import { useGetUserLocation } from "../../helpers/useGetUserLocation";
 
 interface ApiResponse {
   id: number;
@@ -17,24 +15,34 @@ interface ApiResponse {
   units_system: number;
 }
 
+interface PlanProps {
+  price: number;
+  currency: string;
+  language: string;
+}
+
 const Plans = () => {
+  const [starter, setStarter] = useState<PlanProps | null>();
+  const [premium, setPremium] = useState<PlanProps | null>();
+  const [professional, setProfessional] = useState<PlanProps | null>();
   const { location } = useGetUserLocation();
 
   useEffect(() => {
     async function getPlans() {
       const data = await fetch(`https://app.satagro.pl/api/plans/?region=${location}&units=metric`);
       const res = await data.json();
-      console.log(res);
-      filterPlans(res);
+      setStarter(filterPlans(res).starter);
+      setPremium(filterPlans(res).premium);
+      setProfessional(filterPlans(res).professional);
     }
     getPlans();
   }, [location]);
 
   return (
     <div className={styles.wrapper}>
-      <CardStarter />
-      <CardPremium />
-      <CardProfessional />
+      {starter && <CardStarter currency={starter.currency} />}
+      {premium && <CardPremium price={premium.price} currency={premium.currency} />}
+      {professional && <CardProfessional price={professional.price} currency={professional.currency} />}
     </div>
   );
 };
@@ -44,5 +52,18 @@ export default Plans;
 function filterPlans(plans: ApiResponse[]) {
   const acceptedPlans = ["starter", "premium", "professional"];
   const filteredPlans = plans.filter((plan) => acceptedPlans.includes(plan.plan.name.toLowerCase()));
-  console.log(filteredPlans);
+  const starterData = filteredPlans.find((plan) => plan.plan.name.toLowerCase() === "starter");
+  const premiumData = filteredPlans.find((plan) => plan.plan.name.toLowerCase() === "premium");
+  const professionalData = filteredPlans.find((plan) => plan.plan.name.toLowerCase() === "professional");
+  const starter = pricesForPlans(starterData);
+  const premium = pricesForPlans(premiumData);
+  const professional = pricesForPlans(professionalData);
+  return { starter, premium, professional };
+}
+
+function pricesForPlans(plan: ApiResponse | undefined) {
+  if (plan) {
+    return { price: plan.yearly_rate, currency: plan.currency, language: plan.region };
+  }
+  return null;
 }

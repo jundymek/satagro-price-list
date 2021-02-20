@@ -2,12 +2,14 @@ import React from "react";
 import styles from "./card.module.scss";
 import clsx from "clsx";
 
-interface CardProps {
+export interface CardProps {
   type: "starter" | "premium" | "professional";
+  price?: number;
+  currency?: string;
   children: React.ReactNode;
 }
 
-const Card = ({ type, children }: CardProps) => {
+const Card = ({ type, price = 0, currency, children }: CardProps) => {
   const titleWrapperClass = clsx(styles.titleWrapper, {
     [styles.red]: type === "premium",
     [styles.blue]: type === "professional",
@@ -25,7 +27,7 @@ const Card = ({ type, children }: CardProps) => {
       <div className={titleWrapperClass}>
         <h2 className={styles.title}>{type.toUpperCase()}</h2>
         <p className={styles.price}>
-          15 <span>PLN</span>
+          {price} <span>{currency}</span>
         </p>
       </div>
       <div className={styles.textWrapper}>
