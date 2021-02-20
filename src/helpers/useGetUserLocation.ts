@@ -9,7 +9,7 @@ export function useGetUserLocation() {
     async function getData() {
       const acceptedLocations = ["PL", "CZ", "LT", "SK"];
       const location = await getUserLocation();
-      if (acceptedLocations.includes(location)) {
+      if (acceptedLocations.includes(location.countryCode)) {
         setLocation(location.countryCode);
       }
     }
