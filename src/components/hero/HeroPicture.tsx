@@ -41,7 +41,7 @@ const HeroPicture = () => {
           width="161.539"
           height="78.48"
           transform="translate(366.269 170.972)"
-          fill="#6c63ff"
+          fill="#0367a6"
         />
         <path
           id="Path_198"
@@ -71,7 +71,7 @@ const HeroPicture = () => {
           height="56"
           rx="6"
           transform="translate(419.112 288.229)"
-          fill="#6c63ff"
+          fill="#0367a6"
         />
         <ellipse
           id="Ellipse_29"
