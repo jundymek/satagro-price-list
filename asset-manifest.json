@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/satagro-price-list/static/css/main.3fd0afc6.chunk.css",
-    "main.js": "/satagro-price-list/static/js/main.c5fd720d.chunk.js",
-    "main.js.map": "/satagro-price-list/static/js/main.c5fd720d.chunk.js.map",
+    "main.js": "/satagro-price-list/static/js/main.02e254c0.chunk.js",
+    "main.js.map": "/satagro-price-list/static/js/main.02e254c0.chunk.js.map",
     "runtime-main.js": "/satagro-price-list/static/js/runtime-main.c92fc518.js",
     "runtime-main.js.map": "/satagro-price-list/static/js/runtime-main.c92fc518.js.map",
     "static/js/2.5a18dabd.chunk.js": "/satagro-price-list/static/js/2.5a18dabd.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c92fc518.js",
     "static/js/2.5a18dabd.chunk.js",
     "static/css/main.3fd0afc6.chunk.css",
-    "static/js/main.c5fd720d.chunk.js"
+    "static/js/main.02e254c0.chunk.js"
   ]
 }
