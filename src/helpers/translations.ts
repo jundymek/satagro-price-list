@@ -1,5 +1,6 @@
 export const translation = {
   PL: {
+    fetchError: "Pobieranie danych nie powiodło się",
     offer: "Oferta",
     starter: {
       price: "Gratis",
@@ -27,6 +28,7 @@ export const translation = {
     year: "rok",
   },
   CZ: {
+    fetchError: "Stažení dat se nezdařilo ",
     offer: "Nabídka",
     starter: {
       price: "Zdarma",
@@ -54,6 +56,7 @@ export const translation = {
     year: "rok",
   },
   LT: {
+    fetchError: "Nepavyko atsisiųsti duomenų",
     offer: "Pasiūlymas",
     starter: {
       price: "Nemokamai ",
@@ -81,6 +84,7 @@ export const translation = {
     year: "metus",
   },
   SK: {
+    fetchError: "Sťahovanie dát zlyhalo",
     offer: "Ponuka",
     starter: {
       price: "Zadarmo ",

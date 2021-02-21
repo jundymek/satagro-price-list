@@ -3,6 +3,7 @@ import Plans from "./components/plans/Plans";
 import styles from "./app.module.scss";
 import Hero from "./components/hero/Hero";
 import { LocationProvider } from "./context/locationContext";
+
 function App() {
   return (
     <div className={styles.container}>

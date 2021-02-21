@@ -5,6 +5,7 @@ import CardPremium from "../card/CardPremium";
 import CardProfessional from "../card/CardProfessional";
 import Flags from "../flags/Flags";
 import { useLocationState } from "../../context/locationContext";
+import { translation } from "../../helpers/translations";
 
 interface ApiResponse {
   id: number;
@@ -26,29 +27,50 @@ const Plans = () => {
   const [starter, setStarter] = useState<PlanProps | null>();
   const [premium, setPremium] = useState<PlanProps | null>();
   const [professional, setProfessional] = useState<PlanProps | null>();
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | undefined>(undefined);
   const { location } = useLocationState();
 
   useEffect(() => {
     async function getPlans() {
-      const data = await fetch(`https://app.satagro.pl/api/plans/?region=${location}&units=metric`);
-      const res = await data.json();
-      setStarter(filterPlans(res).starter);
-      setPremium(filterPlans(res).premium);
-      setProfessional(filterPlans(res).professional);
+      setIsLoading(true);
+      try {
+        const data = await fetch(`https://app.satagro.pl/api/plans/?region=${location}&units=metric`);
+        const res = await data.json();
+        if (!res.length) {
+          throw new Error("Brak danych");
+        }
+        setStarter(filterPlans(res).starter);
+        setPremium(filterPlans(res).premium);
+        setProfessional(filterPlans(res).professional);
+        setIsLoading(false);
+      } catch (err) {
+        console.log(err);
+        setError(translation[location].fetchError);
+        setIsLoading(false);
+      }
     }
     getPlans();
   }, [location]);
 
-  return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        {starter && <CardStarter currency={starter.currency} price={starter.price} />}
-        {premium && <CardPremium price={premium.price} currency={premium.currency} />}
-        {professional && <CardProfessional price={professional.price} currency={professional.currency} />}
-        <Flags />
+  if (isLoading) {
+    return <div className={styles.loading}>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  } else {
+    return (
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
+          {starter && <CardStarter currency={starter.currency} price={starter.price} />}
+          {premium && <CardPremium price={premium.price} currency={premium.currency} />}
+          {professional && <CardProfessional price={professional.price} currency={professional.currency} />}
+          <Flags />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default Plans;

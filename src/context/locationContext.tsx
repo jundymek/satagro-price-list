@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+require("dotenv").config();
 
 export type UserLocation = "PL" | "CZ" | "LT" | "SK";
 
@@ -26,8 +27,8 @@ function LocationProvider({ children }: LocationProviderProps) {
     async function getData() {
       const acceptedLocations = ["PL", "CZ", "LT", "SK"];
       const location = await getUserLocation();
-      if (acceptedLocations.includes(location.countryCode)) {
-        setLocation(location.countryCode);
+      if (acceptedLocations.includes(location.country_code)) {
+        setLocation(location.country_code);
       }
     }
     getData();
@@ -61,7 +62,7 @@ function useLocationDispatch() {
 export { LocationProvider, useLocationState, useLocationDispatch };
 
 async function getUserLocation() {
-  const data = await fetch("https://ip-api.com/json");
+  const data = await fetch(`https://api.ipdata.co/?api-key=${process.env.REACT_APP_API_KEY}`);
   const res = await data.json();
   return res;
 }
