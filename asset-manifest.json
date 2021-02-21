@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/satagro-price-list/static/css/main.3fd0afc6.chunk.css",
-    "main.js": "/satagro-price-list/static/js/main.1d83494c.chunk.js",
-    "main.js.map": "/satagro-price-list/static/js/main.1d83494c.chunk.js.map",
-    "runtime-main.js": "/satagro-price-list/static/js/runtime-main.4cdfa0ba.js",
-    "runtime-main.js.map": "/satagro-price-list/static/js/runtime-main.4cdfa0ba.js.map",
-    "static/js/2.82c559e9.chunk.js": "/satagro-price-list/static/js/2.82c559e9.chunk.js",
-    "static/js/2.82c559e9.chunk.js.map": "/satagro-price-list/static/js/2.82c559e9.chunk.js.map",
-    "static/js/3.625358fb.chunk.js": "/satagro-price-list/static/js/3.625358fb.chunk.js",
-    "static/js/3.625358fb.chunk.js.map": "/satagro-price-list/static/js/3.625358fb.chunk.js.map",
+    "main.js": "/satagro-price-list/static/js/main.5ce0e8e3.chunk.js",
+    "main.js.map": "/satagro-price-list/static/js/main.5ce0e8e3.chunk.js.map",
+    "runtime-main.js": "/satagro-price-list/static/js/runtime-main.c92fc518.js",
+    "runtime-main.js.map": "/satagro-price-list/static/js/runtime-main.c92fc518.js.map",
+    "static/js/2.5a18dabd.chunk.js": "/satagro-price-list/static/js/2.5a18dabd.chunk.js",
+    "static/js/2.5a18dabd.chunk.js.map": "/satagro-price-list/static/js/2.5a18dabd.chunk.js.map",
+    "static/js/3.f7ea1fc3.chunk.js": "/satagro-price-list/static/js/3.f7ea1fc3.chunk.js",
+    "static/js/3.f7ea1fc3.chunk.js.map": "/satagro-price-list/static/js/3.f7ea1fc3.chunk.js.map",
     "index.html": "/satagro-price-list/index.html",
     "static/css/main.3fd0afc6.chunk.css.map": "/satagro-price-list/static/css/main.3fd0afc6.chunk.css.map",
-    "static/js/2.82c559e9.chunk.js.LICENSE.txt": "/satagro-price-list/static/js/2.82c559e9.chunk.js.LICENSE.txt"
+    "static/js/2.5a18dabd.chunk.js.LICENSE.txt": "/satagro-price-list/static/js/2.5a18dabd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4cdfa0ba.js",
-    "static/js/2.82c559e9.chunk.js",
+    "static/js/runtime-main.c92fc518.js",
+    "static/js/2.5a18dabd.chunk.js",
     "static/css/main.3fd0afc6.chunk.css",
-    "static/js/main.1d83494c.chunk.js"
+    "static/js/main.5ce0e8e3.chunk.js"
   ]
 }
