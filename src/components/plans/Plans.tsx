@@ -56,20 +56,14 @@ const Plans = () => {
   }
 
   if (error) {
-    return (
-      <div>
-        <ErrorComponent error={error} />
-      </div>
-    );
+    return <ErrorComponent error={error} />;
   } else {
     return (
-      <div className={styles.container}>
-        <div className={styles.wrapper}>
-          {starter && <CardStarter currency={starter.currency} price={starter.price} />}
-          {premium && <CardPremium price={premium.price} currency={premium.currency} />}
-          {professional && <CardProfessional price={professional.price} currency={professional.currency} />}
-          <Flags />
-        </div>
+      <div className={styles.wrapper}>
+        {starter && <CardStarter currency={starter.currency} price={starter.price} />}
+        {premium && <CardPremium price={premium.price} currency={premium.currency} />}
+        {professional && <CardProfessional price={professional.price} currency={professional.currency} />}
+        <Flags />
       </div>
     );
   }

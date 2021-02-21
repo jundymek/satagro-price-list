@@ -13,17 +13,17 @@ export interface CardProps {
 
 const Card = ({ type, price, currency, buttonText, children }: CardProps) => {
   const titleWrapperClass = clsx(styles.titleWrapper, {
-    [styles.red]: type === "premium",
-    [styles.blue]: type === "professional",
+    [styles.premium]: type === "premium",
+    [styles.professional]: type === "professional",
   });
 
   const buttonClass = clsx(styles.button, {
-    [styles.btnRed]: type === "premium",
-    [styles.btnBlue]: type === "professional",
+    [styles.btnPremium]: type === "premium",
+    [styles.btnProfessional]: type === "professional",
   });
 
   const containerClass = clsx(styles.container, {
-    [styles.premium]: type === "premium",
+    [styles.premiumContainer]: type === "premium",
   });
 
   return (

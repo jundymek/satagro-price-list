@@ -8,10 +8,10 @@ interface ErrorComponentProps {
 
 const ErrorComponent = ({ error }: ErrorComponentProps) => {
   return (
-    <div className={styles.error}>
-      <h2 className={styles.errorTitle}>{error}</h2>
+    <section className={styles.error}>
+      <h3 className={styles.errorTitle}>{error}</h3>
       <ErrorPicture />
-    </div>
+    </section>
   );
 };
 
