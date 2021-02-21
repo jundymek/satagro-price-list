@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/satagro-price-list/static/css/main.b063c949.chunk.css",
-    "main.js": "/satagro-price-list/static/js/main.b286abdf.chunk.js",
-    "main.js.map": "/satagro-price-list/static/js/main.b286abdf.chunk.js.map",
-    "runtime-main.js": "/satagro-price-list/static/js/runtime-main.f38048ef.js",
-    "runtime-main.js.map": "/satagro-price-list/static/js/runtime-main.f38048ef.js.map",
-    "static/js/2.6ec5d9f2.chunk.js": "/satagro-price-list/static/js/2.6ec5d9f2.chunk.js",
-    "static/js/2.6ec5d9f2.chunk.js.map": "/satagro-price-list/static/js/2.6ec5d9f2.chunk.js.map",
-    "static/js/3.44cc5078.chunk.js": "/satagro-price-list/static/js/3.44cc5078.chunk.js",
-    "static/js/3.44cc5078.chunk.js.map": "/satagro-price-list/static/js/3.44cc5078.chunk.js.map",
+    "main.css": "/satagro-price-list/static/css/main.a808afeb.chunk.css",
+    "main.js": "/satagro-price-list/static/js/main.d09c20e7.chunk.js",
+    "main.js.map": "/satagro-price-list/static/js/main.d09c20e7.chunk.js.map",
+    "runtime-main.js": "/satagro-price-list/static/js/runtime-main.eb542693.js",
+    "runtime-main.js.map": "/satagro-price-list/static/js/runtime-main.eb542693.js.map",
+    "static/js/2.f2720242.chunk.js": "/satagro-price-list/static/js/2.f2720242.chunk.js",
+    "static/js/2.f2720242.chunk.js.map": "/satagro-price-list/static/js/2.f2720242.chunk.js.map",
+    "static/js/3.a80b443c.chunk.js": "/satagro-price-list/static/js/3.a80b443c.chunk.js",
+    "static/js/3.a80b443c.chunk.js.map": "/satagro-price-list/static/js/3.a80b443c.chunk.js.map",
     "index.html": "/satagro-price-list/index.html",
-    "static/css/main.b063c949.chunk.css.map": "/satagro-price-list/static/css/main.b063c949.chunk.css.map",
-    "static/js/2.6ec5d9f2.chunk.js.LICENSE.txt": "/satagro-price-list/static/js/2.6ec5d9f2.chunk.js.LICENSE.txt"
+    "static/css/main.a808afeb.chunk.css.map": "/satagro-price-list/static/css/main.a808afeb.chunk.css.map",
+    "static/js/2.f2720242.chunk.js.LICENSE.txt": "/satagro-price-list/static/js/2.f2720242.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f38048ef.js",
-    "static/js/2.6ec5d9f2.chunk.js",
-    "static/css/main.b063c949.chunk.css",
-    "static/js/main.b286abdf.chunk.js"
+    "static/js/runtime-main.eb542693.js",
+    "static/js/2.f2720242.chunk.js",
+    "static/css/main.a808afeb.chunk.css",
+    "static/js/main.d09c20e7.chunk.js"
   ]
 }
