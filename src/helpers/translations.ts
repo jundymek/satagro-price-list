@@ -1,5 +1,6 @@
 export const translation = {
   PL: {
+    offer: "Oferta",
     starter: {
       price: "Gratis",
       description: ["1 pole do 50 ha"],
@@ -26,6 +27,7 @@ export const translation = {
     year: "rok",
   },
   CZ: {
+    offer: "Nabídka",
     starter: {
       price: "Zdarma",
       description: ["1 pole do 50 ha"],
@@ -52,6 +54,7 @@ export const translation = {
     year: "rok",
   },
   LT: {
+    offer: "Pasiūlymas",
     starter: {
       price: "Nemokamai ",
       description: ["1 laukas iki 50 ha"],
@@ -78,6 +81,7 @@ export const translation = {
     year: "metus",
   },
   SK: {
+    offer: "Ponuka",
     starter: {
       price: "Zadarmo ",
       description: ["1 pole do 50 ha"],

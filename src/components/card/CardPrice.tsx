@@ -5,15 +5,16 @@ import currencyKroneCzech from "@iconify/icons-tabler/currency-krone-czech";
 import currencyEuro from "@iconify/icons-carbon/currency-euro";
 import { translation } from "../../helpers/translations";
 import clsx from "clsx";
+import { useLocationState } from "../../context/locationContext";
 
 interface CardPrizeProps {
   type: "starter" | "premium" | "professional";
-  location: "PL" | "CZ" | "LT" | "SK";
   price: number;
   currency: string;
 }
 
-const CardPrice = ({ type, price, currency, location }: CardPrizeProps) => {
+const CardPrice = ({ type, price, currency }: CardPrizeProps) => {
+  const { location } = useLocationState();
   const yearText = translation[location].year;
   const gratis = translation[location].starter.price;
   const getCurrencyIcon = (currency: string) => {

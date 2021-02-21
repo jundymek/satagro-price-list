@@ -4,15 +4,12 @@ import poland from "../../assets/poland_flag.png";
 import czech from "../../assets/czech_republic_flag.png";
 import lithuania from "../../assets/lithuania.png";
 import styles from "./flags.module.scss";
-import { UserLocation } from "../../helpers/useGetUserLocation";
 import clsx from "clsx";
+import { useLocationDispatch, useLocationState, UserLocation } from "../../context/locationContext";
 
-interface FlagsProps {
-  location: UserLocation;
-  setLocation: React.Dispatch<React.SetStateAction<UserLocation>>;
-}
-
-const Flags = ({ location, setLocation }: FlagsProps) => {
+const Flags = () => {
+  const { location } = useLocationState();
+  const { setLocation } = useLocationDispatch();
   const titleWrapperClass = (flag: UserLocation) =>
     clsx(styles.flag, {
       [styles.flagActive]: flag === location,
