@@ -9,7 +9,7 @@ Zadanie rekrutacyjne polegające na napisaniu prostej strony wyświetlającej st
 - Scss
 - clsx
 - dotenv
-- https://api.ipdata.co/ do ustalania lokalizacji użytkownika i ustawienia wstępnej wersji językowej
+- https://geolocation-db.com do ustalania lokalizacji użytkownika i ustawienia wstępnej wersji językowej
 
 ### Instrukcja uruchomienia
 
@@ -25,13 +25,7 @@ git clone https://github.com/jundymek/satagro-price-list.git
 npm install lub yarn
 ```
 
-3. Uruchamiamy `json-server`, który będzie naszym API
-
-```
-json-server --watch db.json
-```
-
-4. Na innym porcie uruchamiamy aplikację
+3. Uruchamiamy stronę
 
 ```
 npm start lub yarn start
