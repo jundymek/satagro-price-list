@@ -27,6 +27,7 @@ function LocationProvider({ children }: LocationProviderProps) {
     async function getData() {
       const acceptedLocations = ["PL", "CZ", "LT", "SK"];
       const location = await getUserLocation();
+      console.log(location);
       if (acceptedLocations.includes(location.country_code)) {
         setLocation(location.country_code);
       }
@@ -62,7 +63,7 @@ function useLocationDispatch() {
 export { LocationProvider, useLocationState, useLocationDispatch };
 
 async function getUserLocation() {
-  const data = await fetch(`https://api.ipdata.co/?api-key=${process.env.REACT_APP_API_KEY}`);
+  const data = await fetch(`https://geolocation-db.com/json`);
   const res = await data.json();
   return res;
 }
