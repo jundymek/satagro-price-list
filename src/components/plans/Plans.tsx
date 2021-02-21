@@ -7,6 +7,7 @@ import Flags from "../flags/Flags";
 import { useLocationState } from "../../context/locationContext";
 import { translation } from "../../helpers/translations";
 import ErrorComponent from "../error/ErrorComponent";
+import LoadingSpinner from "../loadingSpinner/LoadingSpinner";
 
 interface ApiResponse {
   id: number;
@@ -28,7 +29,7 @@ const Plans = () => {
   const [starter, setStarter] = useState<PlanProps | null>();
   const [premium, setPremium] = useState<PlanProps | null>();
   const [professional, setProfessional] = useState<PlanProps | null>();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | undefined>(undefined);
   const { location } = useLocationState();
 
@@ -36,7 +37,7 @@ const Plans = () => {
     async function getPlans() {
       setIsLoading(true);
       try {
-        const data = await fetch(`https://app.satagro.pl/api/plans/?region=${location}&units=metrics`);
+        const data = await fetch(`https://app.satagro.pl/api/plans/?region=${location}&units=metric`);
         const res = await data.json();
         if (!res.length) {
           throw new Error("Brak danych");
@@ -55,7 +56,11 @@ const Plans = () => {
   }, [location]);
 
   if (isLoading) {
-    return <div className={styles.loading}>Loading...</div>;
+    return (
+      <div className={styles.loading}>
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   if (error) {
