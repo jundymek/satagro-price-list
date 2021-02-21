@@ -61,7 +61,7 @@ function useLocationDispatch() {
 export { LocationProvider, useLocationState, useLocationDispatch };
 
 async function getUserLocation() {
-  const data = await fetch("http://ip-api.com/json");
+  const data = await fetch("https://ip-api.com/json");
   const res = await data.json();
   return res;
 }
