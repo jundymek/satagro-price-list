@@ -3,8 +3,8 @@ import styles from "./hero.module.scss";
 
 const HeroPicture = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={styles.heroPicture} viewBox="0 0 733.82 503.768">
-      <g id="Group_16" data-name="Group 16" transform="translate(-196.555 -165.086)">
+    <svg viewBox="875.074 354.117 733.851 503.767" className={styles.heroPicture}>
+      <g id="Group_16" data-name="Group 16" transform="matrix(1, 0, 0, 1, 678.550598, 189.02948)">
         <path
           id="Path_204"
           data-name="Path 204"
@@ -20,14 +20,6 @@ const HeroPicture = () => {
           fill="#fff"
         />
         <rect
-          id="Rectangle_15"
-          data-name="Rectangle 15"
-          width="1.308"
-          height="78.48"
-          transform="translate(364.961 170.972)"
-          fill="#e6e6e6"
-        />
-        <rect
           id="Rectangle_17"
           data-name="Rectangle 17"
           width="1.308"
@@ -35,34 +27,17 @@ const HeroPicture = () => {
           transform="translate(527.808 170.972)"
           fill="#e6e6e6"
         />
-        <rect
+        <path
           id="Rectangle_7"
           data-name="Rectangle 7"
-          width="161.539"
-          height="78.48"
-          transform="translate(366.269 170.972)"
-          fill="#0367a6"
+          fill="#03588d"
+          d="M 528.848 169.787 H 651.147 A 39.24 39.24 0 0 1 690.387 209.027 V 211.735 A 36.532 36.532 0 0 1 653.855 248.267 H 528.848 V 169.787 Z"
         />
         <path
           id="Path_198"
           data-name="Path 198"
-          d="M276.268,206.815a24,24,0,1,0,24,24,24,24,0,0,0-24-24Zm0,7.2a7.2,7.2,0,1,1-7.2,7.2A7.2,7.2,0,0,1,276.268,214.016Zm0,34.662a17.484,17.484,0,0,1-14.4-7.685c.115-4.8,9.6-7.442,14.4-7.442s14.285,2.642,14.4,7.442a17.513,17.513,0,0,1-14.4,7.685Z"
-          transform="translate(170.844 -20.53)"
+          d="M 618.326 184.532 C 599.851 184.532 588.304 204.532 597.542 220.532 C 606.779 236.532 629.873 236.532 639.111 220.532 C 641.217 216.884 642.326 212.745 642.326 208.532 C 642.326 195.278 631.581 184.532 618.326 184.532 Z M 618.326 191.732 C 623.869 191.732 627.333 197.732 624.562 202.532 C 621.79 207.332 614.862 207.332 612.091 202.532 C 611.459 201.438 611.126 200.196 611.126 198.932 C 611.127 194.956 614.35 191.733 618.326 191.733 Z M 618.326 226.394 C 612.552 226.368 607.163 223.492 603.926 218.709 C 604.041 213.909 613.526 211.267 618.326 211.267 C 623.126 211.267 632.611 213.909 632.726 218.709 C 629.486 223.488 624.1 226.363 618.326 226.394 Z"
           fill="#fff"
-        />
-        <path
-          id="Path_200"
-          data-name="Path 200"
-          d="M620.7,206.815a24,24,0,1,0,24,24,24,24,0,0,0-24-24Zm0,7.2a7.2,7.2,0,1,1-7.2,7.2A7.2,7.2,0,0,1,620.7,214.015Zm0,34.662a17.484,17.484,0,0,1-14.4-7.685c.115-4.8,9.6-7.442,14.4-7.442s14.285,2.642,14.4,7.442a17.513,17.513,0,0,1-14.4,7.685Z"
-          transform="translate(-336.439 -20.53)"
-          fill="#e6e6e6"
-        />
-        <path
-          id="Path_242"
-          data-name="Path 242"
-          d="M620.7,206.815a24,24,0,1,0,24,24,24,24,0,0,0-24-24Zm0,7.2a7.2,7.2,0,1,1-7.2,7.2A7.2,7.2,0,0,1,620.7,214.015Zm0,34.662a17.484,17.484,0,0,1-14.4-7.685c.115-4.8,9.6-7.442,14.4-7.442s14.285,2.642,14.4,7.442a17.513,17.513,0,0,1-14.4,7.685Z"
-          transform="translate(-10.892 -20.53)"
-          fill="#e6e6e6"
         />
         <rect
           id="Rectangle_9"
@@ -71,7 +46,7 @@ const HeroPicture = () => {
           height="56"
           rx="6"
           transform="translate(419.112 288.229)"
-          fill="#0367a6"
+          fill="#03588d"
         />
         <ellipse
           id="Ellipse_29"
@@ -251,6 +226,14 @@ const HeroPicture = () => {
           />
         </g>
       </g>
+      <image
+        width="200"
+        height="45"
+        x="954.526"
+        y="377.977"
+        transform="matrix(1.348704, 0, 0, 1.390771, -374.748993, -159.997009)"
+        href="data:image/png;base64,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"
+      />
     </svg>
   );
 };
