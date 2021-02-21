@@ -6,7 +6,6 @@ import HeroPicture from "./HeroPicture";
 
 const Hero = () => {
   const { location } = useLocationState();
-  console.log(location);
   const offerText = translation[location].offer;
   return (
     <div className={styles.wrapper}>

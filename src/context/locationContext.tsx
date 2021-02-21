@@ -27,7 +27,6 @@ function LocationProvider({ children }: LocationProviderProps) {
     async function getData() {
       const acceptedLocations = ["PL", "CZ", "LT", "SK"];
       const location = await getUserLocation();
-      console.log(location);
       if (acceptedLocations.includes(location.country_code)) {
         setLocation(location.country_code);
       }

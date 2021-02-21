@@ -30,3 +30,23 @@ npm install lub yarn
 ```
 npm start lub yarn start
 ```
+
+## Poniżej kilka przykładowych obrazków
+
+### Desktop:
+
+![Widok dekstopowy](github-images/desktop.png "Widok dekstopowy")
+![Widok dekstopowy1](github-images/desktop1.png "Widok dekstopowy")
+
+### Mobile:
+
+![Widok mobile](github-images/mobile.png "Widok mobile")
+![Widok mobile1](github-images/mobile1.png "Widok mobile")
+
+### Desktop - błąd wczytywania
+
+![Widok błędu](github-images/desktop-error.png "Widok błędu desktop")
+
+### Mobile - błąd wczytywania
+
+![Widok błędu](github-images/mobile-error.png "Widok błędu mobile")
