@@ -8,16 +8,7 @@ import { useLocationState } from "../../context/locationContext";
 import { translation } from "../../helpers/translations";
 import ErrorComponent from "../error/ErrorComponent";
 import LoadingSpinner from "../loadingSpinner/LoadingSpinner";
-
-interface ApiResponse {
-  id: number;
-  plan: { id: number; name: string };
-  currency: string;
-  currency_symbol: string;
-  yearly_rate: number;
-  region: string;
-  units_system: number;
-}
+import { getPlans } from "./utils/getPlans";
 
 interface PlanProps {
   price: number;
@@ -34,7 +25,7 @@ const Plans = () => {
   const { location } = useLocationState();
 
   useEffect(() => {
-    async function getPlans() {
+    async function getData() {
       setIsLoading(true);
       try {
         const data = await fetch(`https://app.satagro.pl/api/plans/?region=${location}&units=metric`);
@@ -42,9 +33,10 @@ const Plans = () => {
         if (!res.length) {
           throw new Error("Brak danych");
         }
-        setStarter(filterPlans(res).starter);
-        setPremium(filterPlans(res).premium);
-        setProfessional(filterPlans(res).professional);
+        const { starter, premium, professional } = getPlans(res);
+        setStarter(starter);
+        setPremium(premium);
+        setProfessional(professional);
         setIsLoading(false);
       } catch (err) {
         console.log(err);
@@ -52,7 +44,7 @@ const Plans = () => {
         setIsLoading(false);
       }
     }
-    getPlans();
+    getData();
   }, [location]);
 
   if (isLoading) {
@@ -84,22 +76,3 @@ const Plans = () => {
 };
 
 export default Plans;
-
-function filterPlans(plans: ApiResponse[]) {
-  const acceptedPlans = ["starter", "premium", "professional"];
-  const filteredPlans = plans.filter((plan) => acceptedPlans.includes(plan.plan.name.toLowerCase()));
-  const starterData = filteredPlans.find((plan) => plan.plan.name.toLowerCase() === "starter");
-  const premiumData = filteredPlans.find((plan) => plan.plan.name.toLowerCase() === "premium");
-  const professionalData = filteredPlans.find((plan) => plan.plan.name.toLowerCase() === "professional");
-  const starter = pricesForPlans(starterData);
-  const premium = pricesForPlans(premiumData);
-  const professional = pricesForPlans(professionalData);
-  return { starter, premium, professional };
-}
-
-function pricesForPlans(plan: ApiResponse | undefined) {
-  if (plan) {
-    return { price: plan.yearly_rate, currency: plan.currency, language: plan.region };
-  }
-  return null;
-}
