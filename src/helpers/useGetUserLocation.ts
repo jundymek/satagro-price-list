@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-type UserLocation = "PL" | "CZ" | "LT" | "SK";
+export type UserLocation = "PL" | "CZ" | "LT" | "SK";
 
 export function useGetUserLocation() {
   const [location, setLocation] = useState<UserLocation>("PL");
@@ -16,7 +16,7 @@ export function useGetUserLocation() {
     getData();
   }, []);
 
-  return { location };
+  return { location, setLocation };
 }
 
 async function getUserLocation() {

@@ -4,6 +4,7 @@ import CardStarter from "../card/CardStarter";
 import CardPremium from "../card/CardPremium";
 import CardProfessional from "../card/CardProfessional";
 import { useGetUserLocation } from "../../helpers/useGetUserLocation";
+import Flags from "../flags/Flags";
 
 interface ApiResponse {
   id: number;
@@ -25,7 +26,7 @@ const Plans = () => {
   const [starter, setStarter] = useState<PlanProps | null>();
   const [premium, setPremium] = useState<PlanProps | null>();
   const [professional, setProfessional] = useState<PlanProps | null>();
-  const { location } = useGetUserLocation();
+  const { location, setLocation } = useGetUserLocation();
 
   useEffect(() => {
     async function getPlans() {
@@ -40,12 +41,15 @@ const Plans = () => {
   }, [location]);
 
   return (
-    <div className={styles.wrapper}>
-      {starter && <CardStarter currency={starter.currency} price={starter.price} location={location} />}
-      {premium && <CardPremium price={premium.price} currency={premium.currency} location={location} />}
-      {professional && (
-        <CardProfessional price={professional.price} currency={professional.currency} location={location} />
-      )}
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        {starter && <CardStarter currency={starter.currency} price={starter.price} location={location} />}
+        {premium && <CardPremium price={premium.price} currency={premium.currency} location={location} />}
+        {professional && (
+          <CardProfessional price={professional.price} currency={professional.currency} location={location} />
+        )}
+        <Flags location={location} setLocation={setLocation} />
+      </div>
     </div>
   );
 };

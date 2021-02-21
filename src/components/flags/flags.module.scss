@@ -1,0 +1,38 @@
+@import "../../styles/variables";
+
+.button {
+  margin: 0 5px;
+  padding: 0;
+  z-index: 1;
+  width: 40px;
+  height: 30px;
+  border: none;
+  display: inline-block;
+  background: none;
+  cursor: pointer;
+}
+
+.flagsWrapper {
+  display: flex;
+  height: 100px;
+  margin-top: 20px;
+  @media only screen and (min-width: $laptop) {
+    position: absolute;
+    right: 15px;
+    bottom: -20px;
+  }
+}
+
+.flag {
+  width: 40px;
+  height: 30px;
+  padding: 0 5px;
+  filter: brightness(60%);
+  transform: scale(0.7);
+  transition: transform 0.2s;
+}
+
+.flagActive {
+  filter: none;
+  transform: scale(1);
+}
