@@ -6,6 +6,7 @@ import CardProfessional from "../card/CardProfessional";
 import Flags from "../flags/Flags";
 import { useLocationState } from "../../context/locationContext";
 import { translation } from "../../helpers/translations";
+import ErrorComponent from "../error/ErrorComponent";
 
 interface ApiResponse {
   id: number;
@@ -35,7 +36,7 @@ const Plans = () => {
     async function getPlans() {
       setIsLoading(true);
       try {
-        const data = await fetch(`https://app.satagro.pl/api/plans/?region=${location}&units=metric`);
+        const data = await fetch(`https://app.satagro.pl/api/plans/?region=${location}&units=metrics`);
         const res = await data.json();
         if (!res.length) {
           throw new Error("Brak danych");
@@ -58,7 +59,11 @@ const Plans = () => {
   }
 
   if (error) {
-    return <div>{error}</div>;
+    return (
+      <div>
+        <ErrorComponent error={error} />
+      </div>
+    );
   } else {
     return (
       <div className={styles.container}>

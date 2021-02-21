@@ -1,0 +1,34 @@
+@import "../../styles/variables";
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  @media only screen and (min-width: $laptop) {
+    height: 500px;
+  }
+}
+
+.errorTitle {
+  font-size: 20px;
+  max-width: 90%;
+  padding: 20px 0;
+  text-align: center;
+  color: #f50057;
+  @media only screen and (min-width: $laptop) {
+    font-size: 40px;
+  }
+}
+
+.errorPicture {
+  z-index: 1;
+  width: 90%;
+  height: 200px;
+  @media only screen and (min-width: $laptop) {
+    width: 100%;
+    height: 100%;
+  }
+}
