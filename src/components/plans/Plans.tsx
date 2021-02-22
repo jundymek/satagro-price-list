@@ -17,9 +17,9 @@ interface PlanProps {
 }
 
 const Plans = () => {
-  const [starter, setStarter] = useState<PlanProps | null>();
-  const [premium, setPremium] = useState<PlanProps | null>();
-  const [professional, setProfessional] = useState<PlanProps | null>();
+  const [starter, setStarter] = useState<PlanProps | undefined>();
+  const [premium, setPremium] = useState<PlanProps | undefined>();
+  const [professional, setProfessional] = useState<PlanProps | undefined>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | undefined>(undefined);
   const { location } = useLocationState();
@@ -38,6 +38,9 @@ const Plans = () => {
         setPremium(premium);
         setProfessional(professional);
         setIsLoading(false);
+        if (!starter && !premium && !professional) {
+          throw new Error("Brak danych");
+        }
       } catch (err) {
         console.log(err);
         setError(translation[location].fetchError);
