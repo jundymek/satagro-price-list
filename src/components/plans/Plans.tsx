@@ -31,7 +31,7 @@ const Plans = () => {
         const data = await fetch(`https://app.satagro.pl/api/plans/?region=${location}&units=metric`);
         const res = await data.json();
         if (!res.length) {
-          throw new Error("Brak danych");
+          throw new Error("No data");
         }
         const { starter, premium, professional } = getPlans(res);
         setStarter(starter);
@@ -39,7 +39,7 @@ const Plans = () => {
         setProfessional(professional);
         setIsLoading(false);
         if (!starter && !premium && !professional) {
-          throw new Error("Brak danych");
+          throw new Error("No data");
         }
       } catch (err) {
         console.log(err);

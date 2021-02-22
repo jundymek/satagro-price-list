@@ -8,7 +8,6 @@ Zadanie rekrutacyjne polegające na napisaniu prostej strony wyświetlającej st
 - Typescript
 - Scss
 - clsx
-- dotenv
 - https://geolocation-db.com do ustalania lokalizacji użytkownika i ustawienia wstępnej wersji językowej
 
 ### Instrukcja uruchomienia
