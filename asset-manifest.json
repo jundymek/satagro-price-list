@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/satagro-price-list/static/css/main.b940c5b4.chunk.css",
-    "main.js": "/satagro-price-list/static/js/main.97a57de6.chunk.js",
-    "main.js.map": "/satagro-price-list/static/js/main.97a57de6.chunk.js.map",
+    "main.css": "/satagro-price-list/static/css/main.f5a0f96c.chunk.css",
+    "main.js": "/satagro-price-list/static/js/main.10be05ae.chunk.js",
+    "main.js.map": "/satagro-price-list/static/js/main.10be05ae.chunk.js.map",
     "runtime-main.js": "/satagro-price-list/static/js/runtime-main.eb542693.js",
     "runtime-main.js.map": "/satagro-price-list/static/js/runtime-main.eb542693.js.map",
-    "static/js/2.233c0b76.chunk.js": "/satagro-price-list/static/js/2.233c0b76.chunk.js",
-    "static/js/2.233c0b76.chunk.js.map": "/satagro-price-list/static/js/2.233c0b76.chunk.js.map",
+    "static/js/2.c5b3bd4d.chunk.js": "/satagro-price-list/static/js/2.c5b3bd4d.chunk.js",
+    "static/js/2.c5b3bd4d.chunk.js.map": "/satagro-price-list/static/js/2.c5b3bd4d.chunk.js.map",
     "static/js/3.a80b443c.chunk.js": "/satagro-price-list/static/js/3.a80b443c.chunk.js",
     "static/js/3.a80b443c.chunk.js.map": "/satagro-price-list/static/js/3.a80b443c.chunk.js.map",
     "index.html": "/satagro-price-list/index.html",
-    "static/css/main.b940c5b4.chunk.css.map": "/satagro-price-list/static/css/main.b940c5b4.chunk.css.map",
-    "static/js/2.233c0b76.chunk.js.LICENSE.txt": "/satagro-price-list/static/js/2.233c0b76.chunk.js.LICENSE.txt"
+    "static/css/main.f5a0f96c.chunk.css.map": "/satagro-price-list/static/css/main.f5a0f96c.chunk.css.map",
+    "static/js/2.c5b3bd4d.chunk.js.LICENSE.txt": "/satagro-price-list/static/js/2.c5b3bd4d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.eb542693.js",
-    "static/js/2.233c0b76.chunk.js",
-    "static/css/main.b940c5b4.chunk.css",
-    "static/js/main.97a57de6.chunk.js"
+    "static/js/2.c5b3bd4d.chunk.js",
+    "static/css/main.f5a0f96c.chunk.css",
+    "static/js/main.10be05ae.chunk.js"
   ]
 }
