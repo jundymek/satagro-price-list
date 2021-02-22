@@ -34,8 +34,7 @@ npm start lub yarn start
 
 ### Desktop:
 
-![Widok dekstopowy](github-images/desktop.png "Widok dekstopowy")
-![Widok dekstopowy1](github-images/desktop1.png "Widok dekstopowy")
+![Widok dekstopowy](github-images/desktop1.png "Widok dekstopowy")
 
 ### Mobile:
 
